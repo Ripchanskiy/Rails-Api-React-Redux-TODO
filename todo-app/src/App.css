@@ -1,0 +1,13 @@
+.container {
+  text-align: center;
+}
+
+.inputContainer {
+  padding: 15px;
+}
+
+.inputContainer .taskInput {
+  padding: 10px;
+  width: 50%;
+  border-radius: 15px;
+}
