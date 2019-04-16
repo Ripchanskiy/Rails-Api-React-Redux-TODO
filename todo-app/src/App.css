@@ -37,7 +37,12 @@ li.task {
   float: right;
   color: red;
   font-size: 20px;
-  /*visibility: hidden;*/
+  visibility: hidden;
+  cursor: pointer;
+}
+
+li.task:hover .deleteTaskBtn {
+  visibility: visible;
 }
 
 input.taskCheckbox {
