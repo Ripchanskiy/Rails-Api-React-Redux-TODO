@@ -1,8 +1,8 @@
 .container {
-  text-align: center;
 }
 
 .inputContainer {
+  text-align: center;
   padding: 15px;
 }
 
@@ -10,4 +10,69 @@
   padding: 10px;
   width: 50%;
   border-radius: 15px;
+}
+
+.listWrapper {
+  bottom: 50px;
+  top: 160px;
+}
+
+li.task {
+  margin-left: 15%;
+  width: 65%;
+  list-style-type: none;
+  font-size: 1.2em;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.header {
+  color: black;
+  padding: 5px;
+  text-align: center;
+  font-family: Tahoma, sans-serif;
+}
+
+.deleteTaskBtn {
+  float: right;
+  color: red;
+  font-size: 20px;
+  /*visibility: hidden;*/
+}
+
+input.taskCheckbox {
+  position: relative;
+  float: left;
+  margin-right: 10px;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  margin-left: 5px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+input.taskCheckbox:checked:after {
+  color: green;
+  content: "\2713";
+  display: block;
+  font-size: 17px;
+  height: 17px;
+  position: absolute;
+  width: 17px;
+  left: 0.5px;
+  bottom: 2px;
+}
+
+input.taskCheckbox + label.taskLabel {
+  color: black;
+}
+
+input.taskCheckbox:checked + label.taskLabel {
+  text-decoration: line-through;
+  color: #656565;
 }
