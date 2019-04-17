@@ -4,6 +4,8 @@ This is a sample React + Rails Todo list app. To run this:
 - rails db:create db:migrate db:seed
 - rails s
 
+* use 'bundle exec rspec' for rspec tests 
+
 2. cd todo-app
 - npm install
 - npm start

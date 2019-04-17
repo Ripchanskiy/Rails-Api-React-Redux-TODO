@@ -5,20 +5,27 @@ class Api::V1::TodosController < ApplicationController
   end
 
   def create
-    todo = Todo.create(todo_param)
-    render json: todo
+    todo = Todo.new(todo_param)
+    if todo.save
+      render json: todo
+    else
+      render json: todo.errors, status: 422
+    end
   end
 
   def update
     todo = Todo.find(params[:id])
-    todo.update_attributes(todo_param)
-    render json: todo
+    if todo.update_attributes(todo_param)
+      render json: todo
+    else
+      render json: todo.errors, status: 422
+    end
   end
 
   def destroy
     todo = Todo.find(params[:id])
     todo.destroy
-    head :no_content, status: :ok
+    head :no_content
   end
 
   private
